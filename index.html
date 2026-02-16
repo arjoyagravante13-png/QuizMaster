@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Master Elite</title>
+    <link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+
+    <div class="container">
+        <div class="progress-container" id="pBarCont">
+            <div id="progressBar"></div>
+        </div>
+
+        <div id="welcome">
+            <h1>QUIZ MASTER</h1>
+            <p class="welcome-sub">Are you ready to level up your knowledge?</p>
+            <button class="btn-main" onclick="goSubject()">Start Journey</button>
+        </div>
+
+        <div id="subject" class="hidden">
+            <h2>CHOOSE YOUR SUBJECT</h2>
+            <div class="subject-card">
+                <button class="btn-main" onclick="selectSubject('AL 101')">AL 101</button>
+                <button class="btn-main" onclick="selectSubject('CC104')">CC104</button>
+            </div>
+        </div>
+
+        <div id="type" class="hidden">
+            <h2>Choose Challenge Mode</h2>
+            <button class="btn-choice" id="btnMCQ" onclick="showInstruction('MCQ')"><b>A.</b> Multiple Choice</button>
+            <button class="btn-choice" id="btnID" onclick="showInstruction('ID')"><b>B.</b> Identification</button>
+            <button class="btn-choice" id="btnPS" onclick="showInstruction('PS')"><b>C.</b> Problem Solving</button>
+        </div>
+
+        <div id="modeInstruction" class="hidden">
+            <h2 id="modeTitle"></h2>
+            <p id="modeDesc"></p>
+            <button class="btn-main" onclick="startQuiz()">Get Started</button>
+        </div>
+
+        <div id="quiz" class="hidden">
+            <p id="qnum"></p>
+            <h2 id="question"></h2>
+            <div id="choices"></div>
+            
+            <div id="inputWrapper" class="hidden">
+                <input id="inputAns" type="text" placeholder="Type answer here...">
+                <button id="submitBtn" class="btn-main" onclick="submit()">Submit Answer</button>
+            </div>
+        </div>
+
+        <div id="finish" class="hidden">
+            <h1>RESULTS</h1>
+            <h3 id="finishMsg"></h3>
+            <span class="score-badge" id="scoreText"></span>
+            <div class="quote-box">
+                <p id="quoteDisplay"></p>
+            </div>
+            <button class="btn-main" onclick="location.reload()">Play Again</button>
+        </div>
+    </div>
+
+    <script src="JAVA.js"></script>
+</body>
+</html>
